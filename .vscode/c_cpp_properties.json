@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "G:/Program Files/Keil_ARM/ARM/ARMCC/**",
+                "${workspaceFolder}/**",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceRoot}/.vscode/.browse.c_cpp.db",
+                "path": [
+                    "G:/Program Files/Keil_ARM/ARM/ARMCC/**",
+                    "${workspaceFolder}/**",
+                    ""
+                ]
+            },
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__CC_ARM"
+            ],
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}

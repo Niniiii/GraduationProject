@@ -17,7 +17,7 @@
 #include <stdio.h>
 
 extern uint16_t cnt_50ms;
-
+extern unsigned char key_value;
 int main()
 {
 	//stm32 harewave Init
@@ -28,21 +28,26 @@ int main()
 	qmaX981_init();
 	qmaX981_init();
 	qmaX981_init();
-	qmaX981_init();
-	qmaX981_init();
-	qmaX981_init();
 	qmc6308_init();
-	Get_Acce_Offset();
+
+	TIM_Cmd(TIM1, ENABLE);
+
 	
   	while(1)
   	{
-		Key1_Process();
-		if(cnt_50ms > 9)//
+		if(key_value != 0)
 		{
-		 	//QMA7981_read_xyz_g();
-		 	//qmc6308_read_mag_xyz();
-			Get_Angle();
-			cnt_50ms = 0;
+			Key1_Process();
+		}
+		else
+		{
+			if(cnt_50ms > 200)//
+			{
+		 		//QMA7981_read_xyz_g();
+		 		//qmc6308_read_mag_xyz();
+				Get_Angle();
+				cnt_50ms = 0;
+			}
 		}
 	}
 }

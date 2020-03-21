@@ -270,7 +270,7 @@ void QMA7981_read_xyz_g(void)
 	acc_raw_x981[1] = (raw1[1] * 9.807) / acc_lsb_div;
 	acc_raw_x981[2] = (raw1[2] * 9.807) / acc_lsb_div;
 	
-	printf("raw:%.3f %.3f %.3f\n",acc_raw_x981[0],acc_raw_x981[1],acc_raw_x981[2]);
+	//printf("raw:%.3f %.3f %.3f\n",acc_raw_x981[0],acc_raw_x981[1],acc_raw_x981[2]);
 }
 
 //»¬¶¯´°¿ÚÂË²¨

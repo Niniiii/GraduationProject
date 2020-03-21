@@ -180,7 +180,7 @@ void Timer1_Configuration(void)
   TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
   TIM_ClearFlag(TIM1, TIM_FLAG_Update);
   TIM_ITConfig(TIM1,TIM_IT_Update|TIM_IT_Trigger,ENABLE);
-  TIM_Cmd(TIM1, ENABLE);
+  TIM_Cmd(TIM1, DISABLE);
 }
 
 
@@ -190,7 +190,18 @@ void TIM1_UP_IRQHandler(void)//5ms刷新一次
 	if(TIM_GetITStatus(TIM1,TIM_IT_Update)!=RESET)
 	{
 		cnt_50ms++;
-		Key1_Scan();
+		static u8 Keybuf1 = 0xff;
+
+		Keybuf1 = ( ( Keybuf1 << 1 ) | GPIO_ReadInputDataBit(KEY1_GPIO_PORT, KEY1_GPIO_PIN) );//缓存区左移1位，并将当前值移入最低位
+
+		if ( 0xf0 == Keybuf1 )//连续8次扫描都为0，即16毫秒内都检测到按下状态，即认为按键按下
+		{
+			Key1_Scan();
+		}
+		else if ( 0xff == Keybuf1 )//按键弹起
+		{}
+		else
+		{}
 		TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
 	}
 }

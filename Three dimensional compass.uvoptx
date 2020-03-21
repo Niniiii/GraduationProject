@@ -157,18 +157,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>44</LineNumber>
+          <LineNumber>192</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134226514</Address>
+          <Address>134228236</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>I:\姣曚笟璁捐\Program\Three dimensional compass-1.0\User\main.c</Filename>
+          <Filename>.\User\Driver\Src\SYSTEM.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Three_dimensional_compass\User/main.c\44</Expression>
+          <Expression>\\Three_dimensional_compass\User/Driver/Src/SYSTEM.c\192</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -243,6 +243,26 @@
           <count>2</count>
           <WinNumber>2</WinNumber>
           <ItemText>Angle.yaw</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>Acce_Offset_Flag</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>key_count</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>\\Three_dimensional_compass\User/Driver/Src/bsp_key.c\key_value</ItemText>
+        </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>\\Three_dimensional_compass\User/Driver/Src/SYSTEM.c\cnt_50ms</ItemText>
         </Ww>
       </WatchWindow2>
       <Tracepoint>

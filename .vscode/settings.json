@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "calibration.h": "c",
+        "system.h": "c",
+        "angle_calculation.h": "c",
+        "qmax981.h": "c",
+        "qst_sw_i2c.h": "c",
+        "stm32f10x_gpio.h": "c",
+        "stm32f10x_it.h": "c",
+        "qmc6308.h": "c"
+    },
+    "files.encoding": "gb2312"
+}
