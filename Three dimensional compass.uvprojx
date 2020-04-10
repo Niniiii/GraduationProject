@@ -492,6 +492,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\Driver\Src\bsp_key.c</FilePath>
             </File>
+            <File>
+              <FileName>stmflash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\Driver\Src\stmflash.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

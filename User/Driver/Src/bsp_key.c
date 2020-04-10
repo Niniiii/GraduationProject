@@ -21,7 +21,7 @@ unsigned char key_value = 0;
 void Key1_Scan()
 {
 	key_count++;
-	if(key_count > 7)
+	if(key_count > 8)
 		key_count = 0;
 	switch(key_count)
 	{
@@ -34,7 +34,7 @@ void Key1_Scan()
 			break;
 		case 3: key_value = 3;
 			//Acce_Offset_Flag = 0;
-			printf("加计校准完成,接下来进行磁力计X和Y轴校准,请水平旋转罗盘一周……\n"); 
+			printf("接下来进行磁力计X和Y轴校准,请水平旋转罗盘一周……\n"); 
 			Mag_XY_Offset_Flag = 1;
 			printf("请按下按键开始旋转,旋转完成后请再次按下按键……\n");
 			break; 
@@ -50,7 +50,11 @@ void Key1_Scan()
 			break;
 		case 7: key_value = 7;
 			Mag_Z_Offset_Flag = 0;
-			printf("磁力计校准完成,请按按键退出校准模式\n");
+			printf("磁力计校准完成,请按按键退出校准模式……\n");
+			break;
+		case 8: key_value = 8;
+			printf("已退出校准模式……\n");
+			
 			break;
 		default: 
 			break;
@@ -73,7 +77,7 @@ void Key1_Process()
 			{
 				Get_Acce_Offset(); 
 				time++;
-				if(time == 30)
+				if(time == 25)
 				{
 					Acce_Offset_Flag = 0;
 					printf("加计校准完成,请按按键进行下一步校准……\n"); 
@@ -107,6 +111,9 @@ void Key1_Process()
 			}
 		case 7: //ag_Z_Offset_Flag = 0;
 			//printf("磁力计校准完成,请按按键退出校准模式\n");
+			break;
+		case 8: Write_Offset_to_Flash();
+			key_value = 0;
 			break;
 		default: 
 			break;

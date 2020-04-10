@@ -11,4 +11,6 @@
 .\output\angle_calculation.o: .\Chip\CMSIS\system_stm32f10x.h
 .\output\angle_calculation.o: .\Chip\CMSIS\stm32f10x_conf.h
 .\output\angle_calculation.o: .\User\Driver\Inc\qmc6308.h
+.\output\angle_calculation.o: .\User\Driver\Inc\stmflash.h
+.\output\angle_calculation.o: .\Chip\inc\stm32f10x_flash.h
 .\output\angle_calculation.o: G:\Program Files\Keil_Arm\ARM\ARMCC\Bin\..\include\stdio.h

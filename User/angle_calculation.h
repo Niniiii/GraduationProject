@@ -3,6 +3,7 @@
 
 #include "math.h"
 #include "calibration.h"
+#include <stdio.h>
 
 typedef struct{
 	float pitch;

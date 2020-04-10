@@ -20,4 +20,5 @@
 .\output\stm32f10x_it.o: .\User\Driver\Inc\bsp_key.h
 .\output\stm32f10x_it.o: .\User\calibration.h
 .\output\stm32f10x_it.o: .\User\Driver\Inc\QMAX981.h
+.\output\stm32f10x_it.o: .\User\Driver\Inc\stmflash.h
 .\output\stm32f10x_it.o: G:\Program Files\Keil_Arm\ARM\ARMCC\Bin\..\include\stdio.h

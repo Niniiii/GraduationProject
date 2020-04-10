@@ -18,6 +18,7 @@
 #include "qmc6308.h"
 #include "qst_sw_i2c.h"
 #include "stdio.h"
+#include "math.h"
 
 static unsigned char sensor_mask[4] = {
 	0x80,
@@ -175,6 +176,7 @@ static int qmc6308_get_chipid(void)
 
 Magnetic_field Magn = {0, 0, 0};
 //int qmc6308_read_mag_xyz(float *data)
+float mag_float[3];
 int qmc6308_read_mag_xyz(void)
 {
 	int res;
@@ -182,7 +184,7 @@ int qmc6308_read_mag_xyz(void)
 	short hw_d[3] = {0};
 	int t1 = 0;
 	unsigned char rdy = 0;
-	float mag_float[3];
+	//float mag_float[3];
 
 	/* Check status register for data availability */
 	while(!(rdy & 0x01) && (t1 < 5))
@@ -221,8 +223,7 @@ int qmc6308_read_mag_xyz(void)
 	Magn.x = mag_float[0] = (float)hw_d[0] / 1000;		// G		//ÈýÖá
 	Magn.y = mag_float[1] = (float)hw_d[1] / 1000;		// G
 	Magn.z = mag_float[2] = (float)hw_d[2] / 1000;		// G
-
-	//printf("Hx=%f, Hy=%f, Hz=%f\n",mag_float[0],mag_float[1],mag_float[2]);
+	
 	//data[AXIS_X] = (g_map.sign[AXIS_X]*mag_float[g_map.map[AXIS_X]]);
 	//data[AXIS_Y] = (g_map.sign[AXIS_Y]*mag_float[g_map.map[AXIS_Y]]);
 	//data[AXIS_Z] = (g_map.sign[AXIS_Z]*mag_float[g_map.map[AXIS_Z]]);

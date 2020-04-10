@@ -12,4 +12,6 @@
 .\output\bsp_key.o: .\User\calibration.h
 .\output\bsp_key.o: .\User\Driver\Inc\QMAX981.h
 .\output\bsp_key.o: .\User\Driver\Inc\qmc6308.h
+.\output\bsp_key.o: .\User\Driver\Inc\stmflash.h
+.\output\bsp_key.o: .\Chip\inc\stm32f10x_flash.h
 .\output\bsp_key.o: G:\Program Files\Keil_Arm\ARM\ARMCC\Bin\..\include\stdio.h

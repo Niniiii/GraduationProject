@@ -12,3 +12,4 @@
 .\output\qmc6308.o: .\Chip\inc\stm32f10x_gpio.h
 .\output\qmc6308.o: .\Chip\inc\stm32f10x_rcc.h
 .\output\qmc6308.o: G:\Program Files\Keil_Arm\ARM\ARMCC\Bin\..\include\stdio.h
+.\output\qmc6308.o: G:\Program Files\Keil_Arm\ARM\ARMCC\Bin\..\include\math.h

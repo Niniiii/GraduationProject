@@ -7,7 +7,12 @@
         "qst_sw_i2c.h": "c",
         "stm32f10x_gpio.h": "c",
         "stm32f10x_it.h": "c",
-        "qmc6308.h": "c"
+        "qmc6308.h": "c",
+        "stm32f10x.h": "c",
+        "stmflash.h": "c",
+        "stm32f10x_flash.h": "c",
+        "inttypes.h": "c"
     },
-    "files.encoding": "gb2312"
+    "files.encoding": "gb2312",
+    "C_Cpp.errorSquiggles": "Disabled"
 }

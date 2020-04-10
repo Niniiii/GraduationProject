@@ -9,3 +9,5 @@
 .\output\calibration.o: .\Chip\CMSIS\system_stm32f10x.h
 .\output\calibration.o: .\Chip\CMSIS\stm32f10x_conf.h
 .\output\calibration.o: .\User\Driver\Inc\qmc6308.h
+.\output\calibration.o: .\User\Driver\Inc\stmflash.h
+.\output\calibration.o: .\Chip\inc\stm32f10x_flash.h

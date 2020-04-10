@@ -63,8 +63,9 @@ void qmaX981_init(void)
 		qmaX981_write_reg(0x36, 0x00);
 		
 		//qmaX981_set_range(ACC_RANGE_4G);	// 0.488 mg
-		//qmaX981_write_reg(0x0f, 0x02);
-		qmaX981_write_reg(0x0f, 0x02);//量程
+		qmaX981_write_reg(0x0f, 0x02);
+		//qmaX981_write_reg(0x0f, 0x01);//量程 2G量程
+		//acc_lsb_div = 4096;
 		acc_lsb_div = 2048;
 		
 		//0xe0	[65hz			15.48ms]
@@ -77,7 +78,7 @@ void qmaX981_init(void)
 		qmaX981_write_reg(0x10, reg_0x10);//ODR
 		
 		//qmaX981_write_reg(0x4a, 0x08);	//Force I2C I2C interface
-		//qmaX981_write_reg(0x11, 0x80);
+   		//qmaX981_write_reg(0x11, 0x80);
 		qmaX981_write_reg(0x11, 0x80);//模式寄存器
 		
 		//qmaX981_write_reg(0x5f, 0x80);

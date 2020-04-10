@@ -19,6 +19,7 @@
 ".\output\qmc6308.o"
 ".\output\qmax981.o"
 ".\output\bsp_key.o"
+".\output\stmflash.o"
 ".\output\system_stm32f10x.o"
 ".\output\startup_stm32f10x_hd.o"
 ".\output\core_cm3.o"

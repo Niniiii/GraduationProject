@@ -18,6 +18,7 @@
 
 extern uint16_t cnt_50ms;
 extern unsigned char key_value;
+
 int main()
 {
 	//stm32 harewave Init
@@ -28,11 +29,23 @@ int main()
 	qmaX981_init();
 	qmaX981_init();
 	qmaX981_init();
+	qmaX981_init();
+	qmaX981_init();
+	qmaX981_init();
 	qmc6308_init();
 
 	TIM_Cmd(TIM1, ENABLE);
-
+	Read_Offset_to_Flash();
 	
+	{
+		unsigned char i = 0;
+		for(i=0; i<100; i++)
+		{
+			Acceleration_Filter();
+			Magn_Filter();
+		}
+	}
+			
   	while(1)
   	{
 		if(key_value != 0)
@@ -41,7 +54,7 @@ int main()
 		}
 		else
 		{
-			if(cnt_50ms > 200)//
+			if(cnt_50ms > 3)//
 			{
 		 		//QMA7981_read_xyz_g();
 		 		//qmc6308_read_mag_xyz();

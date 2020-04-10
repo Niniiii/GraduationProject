@@ -23,3 +23,4 @@
 .\output\system.o: .\User\calibration.h
 .\output\system.o: .\User\Driver\Inc\QMAX981.h
 .\output\system.o: .\User\Driver\Inc\qmc6308.h
+.\output\system.o: .\User\Driver\Inc\stmflash.h
